@@ -1,4 +1,6 @@
+
 body{
+    width: 100%;
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -35,7 +37,10 @@ body{
     color: white;
     background-color: black;
     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-    padding: 20px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* padding: 20px; */
 }
 #welcome-section h1{
     font-size: 6rem;
@@ -63,6 +68,12 @@ h1,h2{
     color: white;
     font-size: 4rem;
 }
+#contacts h1{
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: white;  
+}
 #link-grid{
     display: grid;
     grid-template-columns: repeat(3,minmax(320px,1fr));
@@ -81,9 +92,26 @@ h1,h2{
         grid-template-rows: repeat(6,minmax(150px,1fr));
     }
 }
+@media(max-width:480px){
+    #link-grid{
+        grid-template-columns: repeat(1,minmax(140px,1fr));
+        grid-template-rows: repeat(6,minmax(50px,1fr));
+    }
+    #projects{
+        padding:2rem;
+    }
+    #navbar a{
+        font-size: 1rem;
+    }
+    #contacts h1{
+        font-size: 2rem;
+    }
+}
+
 .project-tile{
     display: flex;
     flex-direction: column;
+    align-content: space-arounds;
     background-color:#777275;
     text-decoration: none;
     color: white;
@@ -104,12 +132,7 @@ h1,h2{
     text-align: center;
     border-bottom: 0.2rem solid #FF3B9D;
 }
-#contacts h1{
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 0;
-    color: white;  
-}
+
 #contacts p{
     font-size: 2rem;
     font-weight: 200;
