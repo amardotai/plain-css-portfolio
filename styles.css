@@ -132,7 +132,27 @@ h1,h2{
     text-align: center;
     border-bottom: 0.2rem solid #FF3B9D;
 }
+#contact-list{
+    display: grid;
+    grid-template-columns: repeat(5,minmax(100px,1fr));
+    grid-gap: 2rem;
+}
+@media(max-width:1206px){
+    #contact-list{
+        grid-template-columns: repeat(3,minmax(100px,1fr));
+    }
+}
+@media(max-width:840px){
+    #contact-list{
+        grid-template-columns: repeat(2,minmax(100px,1fr));
+    }
+}
+@media(max-width:480px){
+    #contact-list{
+        grid-template-columns: repeat(1,minmax(100px,1fr));
+    }
 
+}
 #contacts p{
     font-size: 2rem;
     font-weight: 200;
